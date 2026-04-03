@@ -1,63 +1,66 @@
 # 🐉 LMO Auto-Bot — Last Meadow Online
 
-บอทอัตโนมัติสำหรับเกม **Last Meadow Online** บน Discord  
-กดทุกอย่างให้เองหมดเลย ไม่ต้องนั่งกดเอง!
+An automation bot for **Last Meadow Online** on Discord.  
+It handles everything automatically — no clicking required!
+
+> 🇹🇭 [ภาษาไทย / Thai version → README-TH.md](./README-TH.md)
 
 ---
 
-## ✨ ฟีเจอร์
+## ✨ Features
 
-- ⚡ **ผจญภัยอัตโนมัติ** — กดปุ่มผจญภัยรัวๆ
-- 🔨 **สร้างอัตโนมัติ** — กดปุ่มสร้างและอ่านลูกศรกดตามเองเลย
-- ⚔️ **การต่อสู้อัตโนมัติ** — จัดการ targets, shield, และ 3x3 grid
-- 🐲 **กดมังกรอัตโนมัติ** — spam คลิกมังกร Grass Toucher
-- 🖥️ **GUI overlay** — เปิด/ปิด ฟีเจอร์แต่ละอันได้ ดูสถิติ realtime
-- 🖱️ **ลาก GUI ได้** — ย้ายหน้าต่างไปวางตรงไหนก็ได้
+- ⚡ **Auto Adventure** — Spams the Adventure button
+- 🔨 **Auto Craft** — Clicks Craft and reads/presses arrow keys automatically
+- ⚔️ **Auto Battle** — Handles targets, shields, and 3x3 grid
+- 🐲 **Auto Dragon** — Spam clicks the Grass Toucher boss
+- 🖥️ **GUI Overlay** — Toggle each feature on/off, view real-time stats
+- 🌐 **Language Switch** — Toggle between Thai 🇹🇭 and English 🇬🇧 in the GUI
+- 🖱️ **Draggable GUI** — Move the window anywhere on screen
 
 ---
 
-## 🚀 วิธีใช้
+## 🚀 How to Use
 
-> ⚠️ ใช้ได้เฉพาะ **Discord บน browser** เท่านั้น (Chrome, Firefox, Edge)  
-> ไม่รองรับ Discord app
+> ⚠️ Only works on **Discord in a browser** (Chrome, Firefox, Edge)  
+> Does NOT work on the Discord desktop app
 
-1. เปิดเกม **Last Meadow Online** ใน Discord บน browser
-2. กด **F12** เพื่อเปิด Developer Tools
-3. คลิกแท็บ **Console**
-4. พิมพ์ `allow pasting` แล้วกด Enter
-5. Copy code จากไฟล์ `lmo_bot.js` แล้ว Paste ลงใน Console กด Enter
-6. GUI จะโผล่มุมขวาบน กด **▶ START** แล้วปล่อยให้บอททำงานเอง
+1. Open **Last Meadow Online** in Discord via your browser
+2. Press **F12** to open Developer Tools
+3. Click the **Console** tab
+4. Type `allow pasting` and press Enter
+5. Copy all code from `lmo_bot.js` and paste it into the Console, then press Enter
+6. The GUI will appear in the top-right corner — click **▶ Start** and let the bot run
 
-**หยุดบอท:** กด **■ STOP** หรือพิมพ์ `window._tlmBot.stop()` ใน console
+**To stop the bot:** Click **■ Stop** or type `window._tlmBot.stop()` in the console
 
 ---
 
 ## 📋 Requirements
 
-- Discord บน **browser** (ไม่ใช่ app)
-- ไม่ต้องติดตั้งอะไรเพิ่ม
+- Discord on a **browser** (not the desktop app)
+- No additional installation required
 
 ---
 
-## ⚠️ หมายเหตุ
+## ⚙️ Configuration
 
-- เกมนี้มีถึง **7 เมษายน 2026** เท่านั้น
-- บอทนี้จำลองการคลิกเหมือนคนเล่นปกติ ไม่ได้ส่ง request ปลอมหรือดึงข้อมูลส่วนตัวใดๆ
-- ใช้ความเสี่ยงของตัวเองนะ
-
----
-
-## 🛠️ ปรับแต่ง
-
-แก้ค่าใน `config` ที่ต้นไฟล์ได้เลย:
+Edit the `config` object at the top of the file:
 
 ```js
 const config = {
-    loopSpeed: 10,         // ความเร็ว main loop (ms)
-    adventureInterval: 10, // ความเร็วกดผจญภัย (ms)
-    autoCraft: true,       // เปิด/ปิด สร้าง
-    autoBattle: true,      // เปิด/ปิด ต่อสู้
-    autoAdventure: true,   // เปิด/ปิด ผจญภัย
-    clickDragon: true,     // เปิด/ปิด กดมังกร
+    loopSpeed: 10,         // Main loop speed (ms) — lower = faster
+    adventureInterval: 10, // Adventure button spam speed (ms)
+    autoCraft: true,       // Enable/disable Auto Craft
+    autoBattle: true,      // Enable/disable Auto Battle
+    autoAdventure: true,   // Enable/disable Auto Adventure
+    clickDragon: true,     // Enable/disable Auto Dragon
 };
 ```
+
+---
+
+## ⚠️ Disclaimer
+
+- The game is available until **April 7, 2026** only
+- This bot simulates normal mouse clicks and keypresses — it does not send fake requests or access any personal data
+- Use at your own risk
